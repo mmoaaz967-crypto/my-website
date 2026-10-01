@@ -1,493 +1,52 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>شركة المستقبل</title>
+    <title>محمد السيد</title>
 
     <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: Arial, sans-serif;
-            background: #f8fafc;
-            color: #1e293b;
-        }
-
-
-        /* ===== القائمة ===== */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: #0f172a;
-            color: white;
-
-            padding: 18px 8%;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-
-        /* ===== القسم الرئيسي ===== */
-
-        .hero {
-            min-height: 600px;
-
-            padding: 80px 8%;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 50px;
-        }
-
-        .hero-text {
-            max-width: 550px;
-
-            animation: slideRight 1s ease;
-        }
-
-        .hero h1 {
-            font-size: 50px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 19px;
-            line-height: 1.8;
-            color: #64748b;
-
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-
-            background: #2563eb;
-            color: white;
-
-            padding: 14px 30px;
-
-            border-radius: 8px;
-
-            text-decoration: none;
-            font-weight: bold;
-
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            transform: translateY(-5px);
-            background: #1d4ed8;
-            box-shadow: 0 10px 25px #2563eb55;
-        }
-
-        .hero img {
-            width: 450px;
-            max-width: 100%;
-
-            border-radius: 20px;
-
-            animation: float 3s ease-in-out infinite;
-        }
-
-
-        /* ===== الأقسام ===== */
-
-        section {
-            padding: 80px 8%;
-        }
-
-        .section-title {
             text-align: center;
-            font-size: 35px;
-            margin-bottom: 50px;
+            background-color: #f2f2f2;
+            padding: 50px;
         }
 
-
-        /* ===== من نحن ===== */
-
-        .about {
-            background: white;
-            text-align: center;
-        }
-
-        .about p {
-            max-width: 750px;
-            margin: auto;
-
-            line-height: 2;
-            color: #64748b;
-            font-size: 18px;
-        }
-
-
-        /* ===== الخدمات ===== */
-
-        .services {
-            background: #f8fafc;
-        }
-
-        .cards {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            width: 280px;
-
-            padding: 35px 25px;
-
-            background: white;
-
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
             border-radius: 15px;
-
-            text-align: center;
-
-            box-shadow: 0 5px 20px #00000010;
-
-            transition: 0.4s;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px #00000020;
+        h1 {
+            color: #222;
         }
 
-        .card-icon {
-            font-size: 45px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            color: #2563eb;
-            margin-bottom: 15px;
-        }
-
-        .card p {
-            color: #64748b;
-            line-height: 1.7;
-        }
-
-
-        /* ===== تواصل معنا ===== */
-
-        .contact {
-            background: #0f172a;
+        button {
+            padding: 12px 25px;
+            background-color: #007bff;
             color: white;
-            text-align: center;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
         }
-
-        .contact p {
-            margin: 20px 0;
-            color: #cbd5e1;
-        }
-
-
-        /* ===== الفوتر ===== */
-
-        footer {
-            background: #020617;
-            color: white;
-
-            text-align: center;
-
-            padding: 25px;
-        }
-
-
-        /* ===== الحركات ===== */
-
-        @keyframes slideRight {
-
-            from {
-                opacity: 0;
-                transform: translateX(80px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-
-        }
-
-
-        @keyframes float {
-
-            0% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-12px);
-            }
-
-            100% {
-                transform: translateY(0);
-            }
-
-        }
-
-
-        /* ===== الموبايل ===== */
-
-        @media (max-width: 768px) {
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav {
-                gap: 12px;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-        }
-
     </style>
-
 </head>
-
 
 <body>
 
-
-    <!-- القائمة -->
-
-    <header>
-
-        <div class="logo">
-            شركة المستقبل
-        </div>
-
-        <nav>
-
-            <a href="#home">
-                الرئيسية
-            </a>
-
-            <a href="#about">
-                من نحن
-            </a>
-
-            <a href="#services">
-                خدماتنا
-            </a>
-
-            <a href="#contact">
-                تواصل معنا
-            </a>
-
-        </nav>
-
-    </header>
-
-
-
-    <!-- الرئيسية -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-text">
-
-            <h1>
-                نصنع المستقبل معًا 🚀
-            </h1>
-
-            <p>
-                نقدم حلولًا رقمية حديثة تساعد الشركات
-                على تطوير أعمالها والوصول إلى عملائها.
-            </p>
-
-            <a href="#contact" class="btn">
-                ابدأ معنا
-            </a>
-
-        </div>
-
-
-        <img
-            src="https://picsum.photos/600/400"
-            alt="صورة الشركة"
-        >
-
-    </section>
-
-
-
-    <!-- من نحن -->
-
-    <section class="about" id="about">
-
-        <h2 class="section-title">
-            من نحن؟
-        </h2>
-
-        <p>
-            نحن فريق يهتم بتقديم حلول تقنية وتصميمات
-            حديثة تساعد أصحاب الأعمال على بناء حضور قوي
-            على الإنترنت.
-        </p>
-
-    </section>
-
-
-
-    <!-- الخدمات -->
-
-    <section class="services" id="services">
-
-        <h2 class="section-title">
-            خدماتنا
-        </h2>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    💻
-                </div>
-
-                <h3>
-                    تصميم المواقع
-                </h3>
-
-                <p>
-                    تصميم مواقع حديثة وسريعة
-                    تعمل على الهاتف والكمبيوتر.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    ⚙️
-                </div>
-
-                <h3>
-                    البرمجة
-                </h3>
-
-                <p>
-                    تطوير برامج وحلول تقنية
-                    تناسب احتياجاتك.
-                </p>
-
-            </div>
-
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🛠️
-                </div>
-
-                <h3>
-                    الدعم الفني
-                </h3>
-
-                <p>
-                    مساعدة وحلول للمشاكل
-                    التقنية المختلفة.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- التواصل -->
-
-    <section class="contact" id="contact">
-
-        <h2 class="section-title">
-            تواصل معنا
-        </h2>
-
-        <p>
-            جاهز تبدأ مشروعك؟
-        </p>
-
-        <a
-            href="https://www.google.com"
-            target="_blank"
-            class="btn"
-        >
-            تواصل الآن
-        </a>
-
-    </section>
-
-
-
-    <!-- الفوتر -->
-
-    <footer>
-
-        © 2026 شركة المستقبل
-
-    </footer>
-
+    <h1>د/محمد العوضي</h1>
+
+    <img src="images/photo.jpg" alt="صورتي">
+<img src="images/5906666736495300342.jpg" alt="صوره">
+  
+
+    <button onclick="location.href='https://www.facebook.com/share/1BxpwGe73i/'">
+       للتواصل
+    </button>
 
 </body>
-
 </html>
-```
